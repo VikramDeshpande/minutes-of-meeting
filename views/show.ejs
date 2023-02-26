@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Summary</title>
+</head>
+
+<body>
+    <%- include('header') -%>
+        <div class="container text-center my-5">
+            <h1>
+                <%=summary.title%>
+            </h1>
+        </div>
+        <div class="container justify-content-center my-5">
+            <h2>
+                Transcript
+            </h2>
+            <p>
+                <%=summary.transcript%>
+            </p>
+            <h2>
+                Summary
+            </h2>
+            <p>
+                <%=summary.summary%>
+            </p>
+        </div>
+
+</body>
+
+</html>

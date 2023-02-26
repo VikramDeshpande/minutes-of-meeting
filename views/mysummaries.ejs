@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Summaries</title>
+</head>
+
+<body>
+    <%- include('header') -%>
+        <div class="container text-center my-5">
+            <h1>My Summaries</h1>
+        </div>
+        <div class="container justify-content-center my-5">
+            <ol class="list-group list-group-numbered list-group-flush">
+                <%for(let summary of summaries){%>
+                    <li class="list-group-item">
+                        <a href="/home/summaries/<%=summary._id%>" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1"><%=summary.title%></h5>
+                              <small class="text-muted"><%=summary.createdAt%></small>
+                            </div>
+                          </a>
+                    </li>
+                <%}%>
+            </ol>
+        </div>
+
+</body>
+
+</html>
